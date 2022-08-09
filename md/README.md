@@ -8,23 +8,31 @@ src/components 하위에 TodoInput, TodoItem 파일이 있습니다.
 - 브런치 네이밍은 통일되게 hnt-영문이름 으로 만들어주세요 ! 
     - ex) hnt-shinhyungki
 
-> in memory db 사용 방법은 사전에 java 가 설치되어 있어야 합니다.
+> ! 중요 ! in memory db 사용 방법은 사전에 java 가 설치되어 있어야 합니다.
 - 아래 사이트에서 .dmg파일을 다운받아 실행해서 Java 설치를 진행해주세요 !
 
 https://www.azul.com/downloads/?version=java-11-lts&os=macos&architecture=arm-64-bit&package=jdk#download-openjdk
 
+![1](1.png "자바 설치")
 
 그런다음 terminal 에서 java -version 명령어를 입력하면 아래 이미지 처럼 version 이 출력되면 자바 설치 끝 ! 
 
+![2](2.png "자바 설치")
 
 1. 설치가 완료되면 clone 받은 repository 에서 프로젝트를 열어주세요 :)
 2. 그런다음 터미널을 켜주시고 $ yarn db 를 입력 해 주세요.
 
-### 위와 같이 spring 배너가 노출되면 메모리 db 띄우기 성공 ! ( 포트는 9099 입니다 :) )
+![3](3.png "자바 설치")
 
-3. yarn serve 로 프론트도 띄워보자.
+![4](4.png "자바 설치")
 
-### 이제 과제를 진행 ! 
+### 위와 같이 spring 배너가 노출되고 port 까지 띄워졌다면, 메모리 db 띄우기 성공 ! ( 포트는 노출되는 것처럼 9099 입니다 :) )
+
+3. yarn serve 로 프론트 서버 도 띄워보자.
+
+![5](5.png "자바 설치")
+
+### 셋팅 완료 ! 이제 과제를 진행 ! 
 
 CRUD 를 만들어 보자.
 - [] 할일 입력란 에 할일을 입력후 추가 버튼을 누르면 List 에 할일이 추가되어야 한다
