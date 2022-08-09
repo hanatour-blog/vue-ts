@@ -13,20 +13,16 @@ src/components 하위에 TodoInput, TodoItem 파일이 있습니다.
 
 https://www.azul.com/downloads/?version=java-11-lts&os=macos&architecture=arm-64-bit&package=jdk#download-openjdk
 
-![image](https://user-images.githubusercontent.com/107032371/183708056-6eaa9972-b0eb-4a4c-a908-2dddba7a80cd.png)
 
 그런다음 terminal 에서 java -version 명령어를 입력하면 아래 이미지 처럼 version 이 출력되면 자바 설치 끝 ! 
 
-![image](https://user-images.githubusercontent.com/107032371/183709604-981c0141-4ec2-477c-8295-294f67c1f8ad.png)
 
 1. 설치가 완료되면 clone 받은 repository 에서 프로젝트를 열어주세요 :)
 2. 그런다음 터미널을 켜주시고 $ yarn db 를 입력 해 주세요.
-![image](https://user-images.githubusercontent.com/107032371/183708346-f82454b9-b9aa-4e38-9a60-9c986b09e1f2.png)
 
 ### 위와 같이 spring 배너가 노출되면 메모리 db 띄우기 성공 ! ( 포트는 9099 입니다 :) )
 
 3. yarn serve 로 프론트도 띄워보자.
-![image](https://user-images.githubusercontent.com/107032371/183708585-31284ede-7fcc-4c0b-8f15-3985ff212624.png)
 
 ### 이제 과제를 진행 ! 
 
