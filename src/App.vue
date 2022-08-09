@@ -1,28 +1,23 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
+  <div>
+    <TodoInput />
     <TodoItems />
   </div>
 </template>
 
 <script>
 import TodoItems from '@/components/TodoItems.vue'
+import TodoInput from '@/components/TodoInput.vue'
 
 export default {
   name: 'App',
+  data() {
+    return {}
+  },
   components: {
     TodoItems,
+    TodoInput,
   },
+  methods: {},
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

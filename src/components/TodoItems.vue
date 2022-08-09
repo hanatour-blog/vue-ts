@@ -1,5 +1,11 @@
 <template>
-  <div></div>
+  <div>
+    <ul>
+      <li>할일</li>
+      <li>할일</li>
+      <li>할일</li>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -8,6 +14,3 @@ export default {
   props: {},
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>
