@@ -3,7 +3,7 @@
 src/components 하위에 TodoInput, TodoItem 파일이 있습니다.
 해당 vue 파일의 부모 컴포넌트는 App.vue 입니다 :)
 
-https://github.com/hanatour-blog/vue-ts 에서 fork 를 해주시고,
+> https://github.com/hanatour-blog/vue-ts 에서 fork 를 해주시고,
 개인 브런치 를 생성합니다. 
 브런치 네이밍은 통일되게 hnt-영문이름 으로 만들어주세요 ! 
 ex) hnt-shinhyungki
