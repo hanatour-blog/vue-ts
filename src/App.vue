@@ -1,12 +1,19 @@
 <template>
   <div>
-    <TodoInput />
-    <TodoItems />
+    <header>
+      <h1>Vue Todo-List</h1>
+    </header>
+    <div>
+      <TodoInput />
+      <ul>
+        <TodoListItem />
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
-import TodoItems from '@/components/TodoItems.vue'
+import TodoListItem from '@/components/TodoListItem.vue'
 import TodoInput from '@/components/TodoInput.vue'
 
 export default {
@@ -15,7 +22,7 @@ export default {
     return {}
   },
   components: {
-    TodoItems,
+    TodoListItem,
     TodoInput,
   },
   methods: {},
