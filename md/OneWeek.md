@@ -23,7 +23,7 @@ https://www.azul.com/downloads/?version=java-11-lts&os=macos&architecture=arm-64
 1. 설치가 완료되면 clone 받은 repository 에서 프로젝트를 열어주세요 :)
 2. 그런다음 터미널을 켜주시고 $ yarn db 를 입력 해 주세요.
 
-> 혹시나 9099 포트가 이미 떠있는경우 9099 포트를 kill 하세요 :)
+> 혹시나 9099 포트가 이미 떠있는경우 9099 포트를 kill 해주세요 ! :)
 ![6](6.png)
 
 ```
