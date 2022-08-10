@@ -13,24 +13,35 @@ src/components 하위에 TodoInput, TodoItem 파일이 있습니다.
 
 https://www.azul.com/downloads/?version=java-11-lts&os=macos&architecture=arm-64-bit&package=jdk#download-openjdk
 
-![1](1.png "자바 설치")
+![1](1.png)
 
 그런다음 terminal 에서 java -version 명령어를 입력하면 아래 이미지 처럼 version 이 출력되면 자바 설치 끝 ! 
 
-![2](2.png "자바 설치")
+![2](2.png)
 
 1. 설치가 완료되면 clone 받은 repository 에서 프로젝트를 열어주세요 :)
 2. 그런다음 터미널을 켜주시고 $ yarn db 를 입력 해 주세요.
 
-![3](3.png "자바 설치")
+> 혹시나 9099 포트가 이미 떠있는경우 9099 포트를 kill 하세요 :)
+![6](6.png)
 
-![4](4.png "자바 설치")
+```
+$ kill $(lsof -t -i:9099)
+```
+
+![3](3.png)
+
+![4](4.png)
 
 ### 위와 같이 spring 배너가 노출되고 port 까지 띄워졌다면, 메모리 db 띄우기 성공 ! ( 포트는 노출되는 것처럼 9099 입니다 :) )
 
-3. yarn serve 로 프론트 서버 도 띄워보자.
 
-![5](5.png "자바 설치")
+> api spec 은 어떻게 되나요 ..? 호출을 어떻게 해야할지 잘 모르겠어요
+> md 파일 하위에 todo-list json 을 첨부해 놓았어요 ! postman 으로 import 해서 테스트 하시면 됩니다 
+
+1. yarn serve 로 프론트 서버 도 띄워보자.
+
+![5](5.png)
 
 ### 셋팅 완료 ! 이제 과제를 진행 ! 
 
