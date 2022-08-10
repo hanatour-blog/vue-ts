@@ -38,6 +38,8 @@ $ kill $(lsof -t -i:9099)
 
 > api spec 은 어떻게 되나요 ..? 호출을 어떻게 해야할지 잘 모르겠어요
 > - md 파일 하위에 todo-list json 을 첨부해 놓았어요 ! postman 으로 import 해서 테스트 하시면 됩니다 
+![7](7.png)
+
 
 1. yarn serve 로 프론트 서버 도 띄워보자.
 
