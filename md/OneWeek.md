@@ -7,6 +7,7 @@ src/components 하위에 TodoInput, TodoItem 파일이 있습니다.
 - 개인 브런치 를 생성합니다. 
 - 브런치 네이밍은 통일되게 hnt-영문이름 으로 만들어주세요 ! 
     - ex) hnt-shinhyungki
+- 작업이 다 되시면 Pull Request 주시면 되겠습니다 :)
 
 > ! 중요 ! in memory db 사용 방법은 사전에 java 가 설치되어 있어야 합니다.
 - 아래 사이트에서 .dmg파일을 다운받아 실행해서 Java 설치를 진행해주세요 !
