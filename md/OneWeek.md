@@ -37,8 +37,8 @@ $ kill $(lsof -t -i:9099)
 ### 위와 같이 spring 배너가 노출되고 port 까지 띄워졌다면, 메모리 db 띄우기 성공 ! ( 포트는 노출되는 것처럼 9099 입니다 :) )
 
 
-> api spec 은 어떻게 되나요 ..? 호출을 어떻게 해야할지 잘 모르겠어요
-> - md 파일 하위에 todo-list json 을 첨부해 놓았어요 ! postman 으로 import 해서 테스트 하시면 됩니다 
+> api spec 은 어떻게 되나요 ..? 호출을 어떻게 해야할지 잘 모르겠어요 !
+> -  -> md 파일 하위에 todo-list json 을 첨부해 놓았어요 ! postman 으로 import 해서 테스트 하시면 됩니다 
 ![7](7.png)
 
 
