@@ -29,8 +29,8 @@ api.interceptors.response.use(
   }
 )
 
-async function fetchItems() {
-  return await api.get()
+function fetchItems() {
+  return api.get()
 }
 
 function updateItem(id, payload) {
