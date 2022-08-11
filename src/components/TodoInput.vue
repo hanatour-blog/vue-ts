@@ -7,20 +7,18 @@
 </template>
 
 <script>
-import index from '@/api/index'
 export default {
-  name: 'TodoInput',
+  name: 'TodoInput', 
   data(){
     return{
       title : ''
     }
-  }, 
+  },  
   methods: {
-    createData(){
-      const inputData = {
-        title : this.title
-      }
-      index.createItem(inputData)
+    createData(){ 
+      this.$emit("save",this.title)
+
+      this.title = ''
     }
   },
 }

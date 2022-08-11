@@ -19,6 +19,8 @@ function deleteItem(id) {
 }
 
 function createItem(payload) {
-  return api.post(payload)
+  return api.post("/",payload).then((e)=>{
+    return e
+  })
 }
 export { fetchItems, createItem, updateItem, deleteItem }
