@@ -15,7 +15,7 @@
 <script>
 import TodoListItem from '@/components/TodoListItem.vue'
 import TodoInput from '@/components/TodoInput.vue'
-
+// import { fetchItems } from '@/api/index'
 export default {
   name: 'App',
   data() {
