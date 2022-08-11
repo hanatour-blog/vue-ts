@@ -4,9 +4,16 @@
       <h1>Vue Todo-List</h1>
     </header>
     <div>
-      <TodoInput />
+      <TodoInput v-model="todoText" @inputText="inputText" @addText="addText" />
       <ul>
-        <TodoListItem />
+        <TodoListItem
+          :key="item.id"
+          v-for="item in todoItems"
+          :index="item.id"
+          :item="item"
+          @delete="deleteTodo"
+          @update="updateTodo"
+        />
       </ul>
     </div>
   </div>
@@ -15,16 +22,45 @@
 <script>
 import TodoListItem from '@/components/TodoListItem.vue'
 import TodoInput from '@/components/TodoInput.vue'
-// import { fetchItems } from '@/api/index'
+import { fetchItems, createItem, deleteItem, updateItem } from '@/api/index'
 export default {
   name: 'App',
   data() {
-    return {}
+    return {
+      todoText: '',
+      todoItems: [],
+      payload: { title: '' },
+    }
   },
   components: {
     TodoListItem,
     TodoInput,
   },
-  methods: {},
+  created() {
+    this.fetchTodoItems()
+  },
+  methods: {
+    async fetchTodoItems() {
+      this.todoItems = await fetchItems()
+    },
+    inputText(inputText) {
+      this.todoText = inputText
+    },
+    addText() {
+      createItem({
+        title: this.todoText,
+      }).then(() => this.init())
+    },
+    deleteTodo(id) {
+      deleteItem(id).then(() => this.init())
+    },
+    updateTodo(id, completed) {
+      updateItem(id, { completed }).then(() => this.init())
+    },
+    init() {
+      this.todoText = ''
+      this.fetchTodoItems()
+    },
+  },
 }
 </script>
