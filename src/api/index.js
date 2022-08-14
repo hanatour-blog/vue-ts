@@ -10,15 +10,15 @@ function fetchItems() {
   return api.get()
 }
 
-function updateItem(id) {
-  return api.patch(id)
+function updateItem(id, payload) {
+  return api.patch( `${id}`, payload)
 }
 
 function deleteItem(id) {
-  return api.delete(id)
+  return api.delete(`${id}`)
 }
 
 function createItem(payload) {
-  return api.post(payload)
+  return api.post("/", payload)
 }
 export { fetchItems, createItem, updateItem, deleteItem }
