@@ -4,21 +4,23 @@ const BASE_URL = 'http://localhost:9099'
 
 const api = axios.create({
   baseURL: `${BASE_URL}`,
+  timeout: 5000,
+  'Cache-Control': 'no-cache',
 })
 
-function fetchItems() {
+function getItems() {
   return api.get()
 }
 
-function updateItem(id) {
-  return api.patch(id)
+function updateItem(id, todo) {
+  return api.patch('/' + id, todo)
 }
 
 function deleteItem(id) {
-  return api.delete(id)
+  return api.delete('/' + id)
 }
 
 function createItem(payload) {
-  return api.post(payload)
+  return api.post('/', payload)
 }
-export { fetchItems, createItem, updateItem, deleteItem }
+export { getItems, createItem, updateItem, deleteItem }

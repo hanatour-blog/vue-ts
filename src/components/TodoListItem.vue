@@ -1,6 +1,6 @@
 <template>
   <li>
-    <span class="item complete">할일</span>
+    <span class="item complete">{{ item.title }}</span>
     <button>삭제</button>
   </li>
 </template>
@@ -8,7 +8,12 @@
 <script>
 export default {
   name: 'TodoItems',
-  props: {},
+  props: {
+    item: {
+      type: Object,
+      required: true,
+    },
+  },
 }
 </script>
 
