@@ -10,8 +10,8 @@ function fetchItems() {
   return api.get()
 }
 
-function updateItem(id) {
-  return api.patch("/",id)
+function updateItem(payload) {
+  return api.patch("/"+payload.id,payload)
 }
 
 function deleteItem(id) {

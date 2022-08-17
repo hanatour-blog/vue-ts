@@ -1,7 +1,7 @@
 <template> 
   <div  >
     <li v-for="(todo,i ) in todoArray" :key="i">
-      <span @click.prevent="completeRow(todo.id)" :class="todo.completed? 'complete' : ''"> {{todo.title}}</span>
+      <span @click.prevent="completeRow(todo)" :class="todo.completed? 'complete' : ''"> {{todo.title}}</span>
       <button @click.prevent="deleteRow(todo.id)">삭제</button>
     </li> 
   </div>
@@ -22,8 +22,9 @@ export default {
     console.log(this.todoArray)
   },
   methods:{
-    completeRow(id){
-      this.$emit("completeRow",id)
+    completeRow(todo){
+      todo.completed = !todo.completed 
+      this.$emit("completeRow",todo)
     },
     deleteRow(id){
       this.$emit("deleteRow",id)

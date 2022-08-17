@@ -40,8 +40,8 @@ export default {
     this.todoList()
   },
   methods: {  
-    async completeRow(updateId){ 
-      let res = await updateItem(updateId)
+    async completeRow(inputData){ 
+      let res = await updateItem(inputData)
       if(res.status === 200){ 
         this.todoList()
       }
