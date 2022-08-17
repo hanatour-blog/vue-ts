@@ -6,7 +6,7 @@
     <div>
       <TodoInput  @save="createData"/>
       <ul v-if="isShowTodoList">
-        <TodoListItem :todoArray="todoArray"/>
+        <TodoListItem :todoArray="todoArray" @deleteRow="deleteRow" @completeRow="completeRow"/>
       </ul>
     </div>
   </div>
@@ -14,7 +14,7 @@
 
 <script>
 
-import {createItem,fetchItems} from '@/api/index'
+import {createItem,fetchItems,deleteItem,updateItem} from '@/api/index'
 
 import TodoListItem from '@/components/TodoListItem.vue'
 import TodoInput from '@/components/TodoInput.vue'
@@ -39,7 +39,19 @@ export default {
   mounted(){
     this.todoList()
   },
-  methods: { 
+  methods: {  
+    async completeRow(updateId){ 
+      let res = await updateItem(updateId)
+      if(res.status === 200){ 
+        this.todoList()
+      }
+    },
+    async deleteRow(deleteId){ 
+      let res = await deleteItem(deleteId)
+      if(res.status === 200){ 
+        this.todoList()
+      }
+    },
     async createData(title){
       let inputData = {
         "title" : title
@@ -47,6 +59,7 @@ export default {
       let res = await createItem(inputData)
       if(res.status === 200){
         alert("등록 되었습니다.") 
+        this.todoList()
       }
     }
     ,

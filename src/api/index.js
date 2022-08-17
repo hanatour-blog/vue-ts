@@ -11,11 +11,11 @@ function fetchItems() {
 }
 
 function updateItem(id) {
-  return api.patch(id)
+  return api.patch("/",id)
 }
 
 function deleteItem(id) {
-  return api.delete(id)
+  return api.delete("/"+id)
 }
 
 function createItem(payload) {

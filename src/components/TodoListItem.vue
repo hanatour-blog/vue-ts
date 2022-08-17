@@ -1,8 +1,8 @@
 <template> 
   <div  >
     <li v-for="(todo,i ) in todoArray" :key="i">
-      <span class="item"> {{todo.title}}</span>
-      <button>삭제</button>
+      <span @click.prevent="completeRow(todo.id)" :class="todo.completed? 'complete' : ''"> {{todo.title}}</span>
+      <button @click.prevent="deleteRow(todo.id)">삭제</button>
     </li> 
   </div>
 </template>
@@ -20,6 +20,14 @@ export default {
   },
   created(){
     console.log(this.todoArray)
+  },
+  methods:{
+    completeRow(id){
+      this.$emit("completeRow",id)
+    },
+    deleteRow(id){
+      this.$emit("deleteRow",id)
+    }
   }
 }
 
